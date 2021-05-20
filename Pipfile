@@ -8,6 +8,7 @@ django = "==3.2"
 psycopg2-binary = "*"
 djangorestframework = "*"
 requests = "*"
+python-dotenv = "*"
 
 [dev-packages]
 pylint = "*"

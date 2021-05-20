@@ -1,6 +1,9 @@
 ### venv ###
 venv
 
+### environmental variables ### 
+.env
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
