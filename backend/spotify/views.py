@@ -5,7 +5,7 @@ from requests import Request, post
 from rest_framework import status
 from rest_framework.response import Response
 from .util import *
-from api.models import Room
+from backend.api.models import Room
 from .models import Vote
 
 class AuthURL(APIView):
@@ -25,20 +25,31 @@ class AuthURL(APIView):
 def spotify_callback(request, format=None):
     code = request.GET.get('code')
     error = request.GET.get('error')
+    
+    test = "test"
+    print("CODE : {code}'")
+    print(f'REIDRECT : {REDIRECT_URI}')
+    print(f'CLIENT ID : {CLIENT_ID}')
+    print(f'SECRET : {CLIENT_SECRET}')
+
 
     response = post('https://accounts.spotify.com/api/token', data={
         'grant_type': 'authorization_code',
         'code': code,
         'redirect_uri': REDIRECT_URI,
         'client_id': CLIENT_ID,
-        'client_secret': CLIENT_SECRET
+        'client_secret': CLIENT_SECRET,
     }).json()
+
+    
 
     access_token = response.get('access_token')
     token_type = response.get('token_type')
     refresh_token = response.get('refresh_token')
     expires_in = response.get('expires_in')
     error = response.get('error')
+
+    print(f'ERROR LOG: {error}')
 
     if not request.session.exists(request.session.session_key):
         request.session.create()

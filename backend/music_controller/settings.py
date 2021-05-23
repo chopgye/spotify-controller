@@ -18,7 +18,6 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -40,10 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api.apps.ApiConfig',
+    'backend.api.apps.ApiConfig',
     'rest_framework',
     'frontend.apps.FrontendConfig',
-    'spotify.apps.SpotifyConfig',      
+    'backend.spotify.apps.SpotifyConfig',      
 ]
 
 MIDDLEWARE = [
@@ -56,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'music_controller.urls'
+ROOT_URLCONF = 'backend.music_controller.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'music_controller.wsgi.application'
+WSGI_APPLICATION = 'backend.music_controller.wsgi.application'
 
 
 # Database
