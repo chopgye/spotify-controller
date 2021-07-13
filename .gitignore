@@ -2,6 +2,7 @@
 venv
 
 ### environmental variables ### 
+#.env
 
 ### VisualStudioCode ###
 .vscode/*
@@ -38,4 +39,4 @@ node_modules
 bower_components
 
 ### keys ###
-credentials.py
+# credentials.py
