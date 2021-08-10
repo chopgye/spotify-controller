@@ -1,4 +1,5 @@
-# Spotify Music Controller
+# [Spotify Music Controller](https://fierce-thicket-12284.herokuapp.com/)
+[link to demo](https://fierce-thicket-12284.herokuapp.com/)
 
 ## About 
 This is a music controller app that utilzies django REST framework on the backend and React NodeJS on the frontend. It allows users to a join a shared room based on a randomly generated room code. The host can connect to the their spotify account via spotify API and play music in a room. The room members can pause/play and skip songs by voting based on the room setting specification set by the host. However the actual audio playback is played from everyone's individual spotify account. 
